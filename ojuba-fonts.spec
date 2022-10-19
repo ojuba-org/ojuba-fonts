@@ -1,6 +1,6 @@
 Name: ojuba-fonts
-Version: 1
-Release: 7%{?dist}
+Version: 2
+Release: 1%{?dist}
 Summary: Ojuba Fonts
 Source: ojuba-fonts.tar.xz
 Summary(ar): خطوط أعجوبة
@@ -17,12 +17,10 @@ Requires: dejavu-sans-fonts
 Requires: dejavu-sans-mono-fonts
 Requires: dejavu-serif-fonts
 Requires: farsi-fonts
-Requires: google-droid-kufi-fonts
 Requires: google-droid-sans-fonts
 Requires: google-droid-sans-mono-fonts
 Requires: google-droid-serif-fonts
 Requires: google-noto-kufi-arabic-fonts
-Requires: google-noto-mono-fonts
 Requires: google-noto-naskh-arabic-fonts
 Requires: google-noto-naskh-arabic-ui-fonts
 Requires: google-noto-sans-fonts
@@ -46,6 +44,7 @@ Requires: kacst-title-fonts
 Requires: kacst-titlel-fonts
 Requires: kfgqpc-fonts
 Requires: kfgqpc-hafs-fonts
+Requires: layla-arcyarc-fonts
 Requires: layla-basic-arabic-fonts
 Requires: layla-boxer-fonts
 Requires: layla-digital-fonts
@@ -137,6 +136,12 @@ fc-cache -fv
 %{_datadir}/applications/%{name}.desktop
 
 %changelog
+* Wed Oct 19 2022 Mosaab Alzoubi <moceap[AT]fedoraproject[DOT]org> - 2-1
+- Update to ver 2
+- Add layla-arcyarc-fonts
+- Remove google-droid-kufi-fonts moved to google-droid-sans-fonts
+- Remove google-noto-mono-fonts obsoleted by Google Noto Sans Mono
+
 * Sat Feb 25 2017 Mosaab Alzoubi <moceap@hotmail.com> - 1-6
 - Add fonts
 
