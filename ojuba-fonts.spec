@@ -1,5 +1,5 @@
 Name: ojuba-fonts
-Version: 2
+Version: 2.1
 Release: 1%{?dist}
 Summary: Ojuba Fonts
 Source: ojuba-fonts.tar.xz
@@ -57,12 +57,12 @@ Requires: naqsh-fonts
 Requires: reem-kufi-fonts
 
 %prep
-%autosetup -n %{name}
+#%autosetup -n %{name}
 
 %install
-install -m 0755 -d %{buildroot}%{_sysconfdir}/fonts/{conf.d,conf.avail}
-install -m 0644 conf.d/* %{buildroot}%{_sysconfdir}/fonts/conf.d
-install -m 0644 conf.avail/* %{buildroot}%{_sysconfdir}/fonts/conf.avail
+#install -m 0755 -d %{buildroot}%{_sysconfdir}/fonts/{conf.d,conf.avail}
+#install -m 0644 conf.d/* %{buildroot}%{_sysconfdir}/fonts/conf.d
+#install -m 0644 conf.avail/* %{buildroot}%{_sysconfdir}/fonts/conf.avail
 
 
 # Register as an application to be visible in the software center
@@ -130,12 +130,15 @@ fc-cache -fv
 fc-cache -fv
 
 %files
-%{_sysconfdir}/fonts/conf.d/*
-%{_sysconfdir}/fonts/conf.avail/*
+#%{_sysconfdir}/fonts/conf.d/*
+#%{_sysconfdir}/fonts/conf.avail/*
 %{_datadir}/appdata/%{name}.appdata.xml
 %{_datadir}/applications/%{name}.desktop
 
 %changelog
+* Mon Oct 24 2022 Mosaab Alzoubi <moceap[AT]fedoraproject[DOT]org> - 2.1-1
+- Stop custom configuration till review
+
 * Wed Oct 19 2022 Mosaab Alzoubi <moceap[AT]fedoraproject[DOT]org> - 2-1
 - Update to ver 2
 - Add layla-arcyarc-fonts
